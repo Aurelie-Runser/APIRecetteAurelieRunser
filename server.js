@@ -2,11 +2,14 @@ const express = require('express');
 const sqlite3 = require('sqlite3');
 const bodyParser = require('body-parser'); // for parsing JSON requests
 
+const cors = require("cors")
+
 const app = express();
 const port = 4000; // Change this to your desired port
 
 // Middleware for parsing JSON requests
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
+app.use(cors());
 
 // Connect to your SQLite database
 const db = new sqlite3.Database('./database/recipesDB.db', (err) => {
