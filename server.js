@@ -90,7 +90,7 @@ app.get('/recipes/:recipeId', (req, res) => {
   
     // Implement logic to fetch a recipe with all its information from the database
     db.get(`
-      SELECT r.recipe_id, r.recipe_name, r.recipe_description, r.image_url, c.name AS cuisine, g.name AS goal
+      SELECT r.recipe_id, r.type, r.title, r.imgSrc, r.prix, r.note, r.icon, r.des, r.lien, r.cuisine_id, r.goal_id
       FROM Recipes r
       LEFT JOIN Cuisines c ON r.cuisine_id = c.cuisine_id
       LEFT JOIN Goals g ON r.goal_id = g.goal_id
