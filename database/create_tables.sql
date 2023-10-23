@@ -37,7 +37,6 @@ CREATE TABLE Recipes (
     imgSrc TEXT,
     prix DECIMAL(10, 2),
     note DECIMAL(5, 2),
-    icon TEXT,
     des TEXT,
     lien TEXT,
     cuisine_id INTEGER,

@@ -16,9 +16,9 @@ INSERT INTO DietaryInformation (name) VALUES ('Gluten-Free');
 INSERT INTO DietaryInformation (name) VALUES ('Low Carb');
 
 -- Insert data into "AllergiesInformation" table
-INSERT INTO AllergiesInformation (name) VALUES ('Peanut Allergy');
-INSERT INTO AllergiesInformation (name) VALUES ('Dairy Allergy');
-INSERT INTO AllergiesInformation (name) VALUES ('Shellfish Allergy');
+INSERT INTO AllergiesInformation (name) VALUES ('Peanut');
+INSERT INTO AllergiesInformation (name) VALUES ('Dairy');
+INSERT INTO AllergiesInformation (name) VALUES ('Shellfish');
 
 -- Insert data into "Ingredients" table
 INSERT INTO Ingredients (name, unit) VALUES ('Tomatoes','pieces');
@@ -49,21 +49,45 @@ INSERT INTO Recipes (type, title, imgSrc, prix, note, des, lien, cuisine_id, goa
     ('produit-big', 'Green Salad','GreenSalad.jpg', 15.00, 4.9, "Recette de Green Salad.", "green-salad",  3, 2);
 
 -- Insert data into "RecipeAllergiesInfo" table
-INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (1, 1);
-INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (2, 3);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (5, 1);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (6, 2);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (6, 3);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (7, 2);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (8, 3);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (9, 1);
+INSERT INTO RecipeAllergiesInfo (recipe_id, allergy_id) VALUES (10, 3);
 
 -- Insert data into "RecipeDietaryInfo" table
-INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (2, 1);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (5, 1);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (6, 2);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (7, 1);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (7, 3);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (8, 2);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (9, 1);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (9, 2);
+INSERT INTO RecipeDietaryInfo (recipe_id, diet_id) VALUES (10, 3);
 
 -- Insert data into "RecipeIngredients" table
-INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (1, 1, 4.0);
-INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (1, 2, 2.5);
-INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (1, 3, 125.0);
-INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (2, 1, 2);
-INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (2, 3, 250);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (5, 1, 4.0);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (5, 2, 2.5);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (6, 3, 125.0);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (7, 1, 2);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (7, 3, 250);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (8, 1, 4.0);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (8, 2, 2.5);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (9, 3, 125.0);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (9, 1, 2);
+INSERT INTO RecipeIngredients (recipe_id, ingredient_id, quantity) VALUES (10, 3, 250);
 
 -- Insert data into "InstructionStep" table
-INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (1, 1, 'Boil pasta until al dente');
-INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (1, 2, 'Cook ground beef in a pan');
-INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (2, 1, 'Chop vegetables');
-INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (2, 2, 'Stir-fry vegetables in a wok');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (5, 1, 'Boil pasta until al dente');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (5, 2, 'Cook ground beef in a pan');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (6, 1, 'Chop vegetables');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (6, 2, 'Stir-fry vegetables in a wok');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (7, 1, 'Boil pasta until al dente');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (8, 1, 'Cook ground beef in a pan');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (9, 1, 'Stir-fry vegetables in a wok');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (9, 2, 'Chop vegetables');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (10, 1, 'Cook ground beef in a pan');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (10, 2, 'Stir-fry vegetables in a wok');
+INSERT INTO InstructionStep (recipe_id, step_number, StepInstruction) VALUES (10, 3, 'Chop vegetables');
